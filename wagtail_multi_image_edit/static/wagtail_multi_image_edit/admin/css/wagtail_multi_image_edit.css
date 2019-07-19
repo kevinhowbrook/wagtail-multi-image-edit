@@ -1,0 +1,24 @@
+.edit-button.multi{
+    margin-bottom:20px;
+}
+
+.listing.multi-image-edit > .selected,
+.listing.multi-image-edit > .selected:hover{
+    background: #ccc;
+}
+
+.multi-image-edit-form-wrapper .left{
+    word-break: break-word;
+}
+
+/* Fix for the image listings,
+   now they have checkboxes added they need to be larger */
+@media screen and (min-width: 50em){
+    .listing.multi-image-edit.images > li {
+        height:265px;
+    }
+}
+
+.multi-image-edit .toggle-select-row{
+    margin-top:10px;
+}

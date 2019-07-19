@@ -1,0 +1,36 @@
+{% extends "wagtailadmin/base.html" %}
+{% load i18n wagtailadmin_tags wagtailimages_tags %}
+{% block titletag %}{% trans "Multi image edit" %}{% endblock %}
+{% block content %}
+    {% trans "Multi image edit" as iamges_str %}
+    {% include "wagtailadmin/shared/header.html" with title=iamges_str icon="image" %}
+
+
+    <div class="nice-padding">
+        <ul class="listing">
+        {% for form in forms %}
+        <li class="col12">
+            {% with form.instance as image %}
+            <div class="multi-image-edit-form-wrapper">
+                <div class="left col3">
+                    {% image image max-165x165 class="show-transparency" alt="" %}
+                    <p>{{ image.title }}</p>
+                </div>
+                <div class="right col9">
+                    {% include "wagtail_multi_image_edit/_multi_edit_form.html" with image=image %}
+                </div>
+                </div>
+            {% endwith %}
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
+
+
+{% block extra_js %}
+    {{ block.super }}
+    {% include "wagtailadmin/pages/_editor_js.html" %}
+    {{ edit_handler.form.media.js }}
+
+{% endblock %}

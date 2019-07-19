@@ -1,0 +1,18 @@
+{% load i18n %}
+<form action="{% url 'multi_image_edit' %}" method="POST" novalidate class="multi-image-edit-form">
+    <ul class="fields">
+        {% csrf_token %}
+        {% for field in form %}
+            {% if field.is_hidden %}
+                {{ field }}
+            {% else %}
+                {% include "wagtailadmin/shared/field_as_li.html" %}
+            {% endif %}
+        {% endfor %}
+        <li>
+            {% comment %} Pass a hidden value to retrive in the POST data {% endcomment %}
+            <input type="hidden" value="{{image.id}}" name="image_id" />
+            <input type="submit" value="{% trans 'Update' %}" class="button" />
+        </li>
+    </ul>
+</form>
