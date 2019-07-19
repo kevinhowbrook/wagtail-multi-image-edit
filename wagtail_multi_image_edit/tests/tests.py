@@ -53,9 +53,7 @@ class MultiImageEditTests(TestCase, WagtailTestUtils):
         response = self.client.get(url)
         self.assertContains(
             response,
-            '<form action="/admin/images/multi-edit/" method="POST" novalidate class="multi-image-edit-form">'.format(
-                self.image_id
-            ),
+            '<form action="/admin/images/multi-edit/" method="POST" novalidate class="multi-image-edit-form">'
         )
 
     # test posting data to the form
