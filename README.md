@@ -18,7 +18,7 @@ _Wagtail Multi Image Edit offers a solution to editing and updating data fields 
 Wagtail Multi Image Edit has a pypi package and can be installed with:
 
 ```
-pip install wagtail-multi-image-edit
+pip install Wagtail-Multi-Image-Edit
 ```
 
 After installing, add it to `INSTALLED_APPS` in your settings file
