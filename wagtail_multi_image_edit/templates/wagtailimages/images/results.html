@@ -27,10 +27,10 @@
                             <span class="visuallyhidden">{{ image.width }} {{ translated_pixels  }} &#215; {{ image.height }} {{ translated_pixels}}</span>
                         </figcaption>
                     </figure>
-                    <p class="col12">
-                        <input type="checkbox" name="select_image" value="{{ image.id }}" class="toggle-select-row"/>
-                    </p>
                 </a>
+                <p class="col12">
+                    <input type="checkbox" name="select_image" value="{{ image.id }}" class="toggle-select-row"/>
+                </p>
             </li>
         {% endfor %}
     </ul>
