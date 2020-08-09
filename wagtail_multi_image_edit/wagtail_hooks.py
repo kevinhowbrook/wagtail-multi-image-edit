@@ -8,7 +8,7 @@ from wagtail.core import hooks
 def global_admin_js():
     return mark_safe(
         '<script src="%s"></script>'
-        % static("/wagtail_multi_image_edit/admin/js/wagtail_multi_image_edit.js")
+        % static("wagtail_multi_image_edit/admin/js/wagtail_multi_image_edit.js")
     )
 
 
@@ -16,5 +16,5 @@ def global_admin_js():
 def global_admin_css():
     return format_html(
         '<link rel="stylesheet" href="%s">'
-        % static("/wagtail_multi_image_edit/admin/css/wagtail_multi_image_edit.css")
+        % static("wagtail_multi_image_edit/admin/css/wagtail_multi_image_edit.css")
     )
