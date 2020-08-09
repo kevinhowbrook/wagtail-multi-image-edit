@@ -14,7 +14,7 @@
     {% else %}
         <h2>{% trans "Latest images" %}</h2>
     {% endif %}
-<a class="button bicolor icon icon-edit edit-button multi visuallyhidden" data-url="{% url 'multi_image_edit' %}?" href="{% url 'multi_image_edit' %}?">Edit images</a>
+<a class="button bicolor icon icon-edit edit-button multi visuallyhidden" data-url="{% url 'multi_image_edit' %}?" href="{% url 'multi_image_edit' %}?">{% trans "Edit images" %}</a>
     <ul class="listing horiz images multi-image-edit">
         {% for image in images %}
             <li id=image-row-{{ image.id }}>
