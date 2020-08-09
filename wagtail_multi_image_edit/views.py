@@ -1,7 +1,7 @@
 from django.http import JsonResponse
 from django.shortcuts import get_object_or_404, render
 from django.template.loader import render_to_string
-from wagtail.admin.utils import permission_denied
+from wagtail.admin.auth import permission_denied
 from wagtail.images import get_image_model
 from wagtail.images.permissions import permission_policy
 
